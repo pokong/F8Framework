@@ -40,12 +40,6 @@ namespace F8Framework.Core.Editor
         {
             ABBuildTool.ClearAllAssetNames();
         }
-        
-        [MenuItem("开发工具/清除所有EditorPrefs")]
-        public static void EditorPrefsDeleteAll()
-        {
-            EditorPrefs.DeleteAll();
-        }
 
         [MenuItem("开发工具/1: F8Run _F8", false, 200)]
         public static void F8Run()
