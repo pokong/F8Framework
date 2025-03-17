@@ -946,7 +946,7 @@ namespace F8Framework.Core
                 // 流化场景资产包不需要加载AssetObject
                 if (assetBundleContent.isStreamedSceneAssetBundle)
                 {
-                    assetPaths.Add(string.Empty);
+                    assetPaths.Add(URLSetting.AssetBundlesPathLower + assetBundleContent.name + ".unity");//加上自己
                     return;
                 }
                 foreach (var assetName in assetBundleContent.GetAllAssetNames()) // 获取得到是小写：assets/assetbundles/prefabs/cube.prefab
