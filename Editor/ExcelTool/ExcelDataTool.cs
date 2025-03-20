@@ -27,8 +27,7 @@ namespace F8Framework.Core.Editor
         public const string BinDataFolder = "/AssetBundles/Config/BinConfigData"; //序列化的数据文件都会放在此文件夹内,此文件夹位于AssetBundles或Resources文件夹下用于读取数据
         public const string DataManagerFolder = "/F8Framework/ConfigData/F8DataManager"; //Data代码路径
         public const string DataManagerName = "F8DataManager.cs"; //Data代码脚本名
-        // public const string ExcelPath = "/StreamingAssets/config"; //需要导表的目录
-        public const string ExcelPath = "/../config"; //需要导表的目录
+        public const string ExcelPath = "/StreamingAssets/config"; //需要导表的目录
         public const string DLLFolder = "/F8Framework/ConfigData"; //存放dll目录
         public const string FileIndexFile = "config/fileindex.txt"; //fileindex文件目录
         private static Dictionary<string, ScriptGenerator> codeList; //存放所有生成的类的代码
@@ -90,8 +89,6 @@ namespace F8Framework.Core.Editor
                 LogF8.LogConfig("首次启动，设置Excel存放目录：" + tempExcelPath + " （如要更改请到----上方菜单栏->开发工具->设置Excel存放目录）");
             }
             string lastExcelPath = F8EditorPrefs.GetString("ExcelPath", default) ?? Application.dataPath + ExcelPath;
-            
-            FileTools.CheckDirAndCreateWhenNeeded(lastExcelPath);
             
             string INPUT_PATH = lastExcelPath;
 
